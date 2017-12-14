@@ -12,37 +12,37 @@ driver_status_list   =  List the driver status. E.g : WHQL, Beta, Nvidia Ready, 
 operating_system_list = List of all the operating systems 
 */
 CREATE TABLE IF NOT EXISTS manufacturer_list (
-	id        mediumint unsigned not null auto_increment,
+    id        mediumint unsigned not null auto_increment,
     company   varchar(128) not null, 
     PRIMARY KEY(id, company)
 );
 
 CREATE TABLE IF NOT EXISTS driver_category_list (
-	id         tinyint unsigned not null auto_increment,
+    id         tinyint unsigned not null auto_increment,
     category   varchar(128) not null, 
     PRIMARY KEY(id, category)
 );
 
 CREATE TABLE IF NOT EXISTS device_category_list (
-	id         mediumint unsigned not null auto_increment,
+    id         mediumint unsigned not null auto_increment,
     category   varchar(128) not null, 
     PRIMARY KEY(id, category)
 );
 
 CREATE TABLE IF NOT EXISTS device_series_list (
-	id        mediumint unsigned not null auto_increment,
+    id        mediumint unsigned not null auto_increment,
     series    varchar(128) not null, 
     PRIMARY KEY(id, series)   
 );
 
 CREATE TABLE IF NOT EXISTS driver_status_list (
-	id                tinyint unsigned not null auto_increment,
+    id                tinyint unsigned not null auto_increment,
     release_status    varchar(128) not null, 
     PRIMARY KEY(id, release_status)
 );
 
 CREATE TABLE IF NOT EXISTS operating_system_list (
-	id                  tinyint unsigned not null auto_increment,
+    id                  tinyint unsigned not null auto_increment,
     operating_system    varchar(128) not null, 
     PRIMARY KEY(id, operating_system)
 );
